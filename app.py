@@ -112,7 +112,7 @@ if uploaded_file:
                 label="Seleccionar Pagina", min_value=1, max_value=len(pages), step=1
             )
             pages[page_sel - 1]
-        api = "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"
+        api = st.secrets["OPENAI_API_KEY"]
         if api:
             # embeddings = OpenAIEmbeddings(openai_api_key=api)
             # # Indexing
