@@ -84,8 +84,8 @@ def test_embed():
 st.title("🤖 SwitchGPT personalizado con origen de datos pdf 🧠 ")
 st.markdown(
     """ 
-        ####  🗨️ Prueba para hablar con archivos PDF con `Conversational Buffer Memory`  
-        > *powered by [code4business]('https://code4business.com') *
+        ####  🗨️ Prueba conversacional con archivos PDF usando `Conversational Buffer Memory`  
+        > *powered by [switch]('https://switchsoftware.us/') *
         ----
         """
 )
@@ -129,13 +129,13 @@ if uploaded_file:
             # Our tool
             tools = [
                 Tool(
-                    name="Empresa Switch Sistema de QA",
+                    name="Empresa Switch Sistema de Preguntas y Respuestas",
                     func=qa.run,
                     description="Útil para cuando necesites responder dudas sobre los aspectos planteados. La entrada puede ser una pregunta parcial o completamente formada.",
                 )
             ]
 
-            prefix = """Tenga una conversación con un ser humano y responda las siguientes preguntas lo mejor que pueda según el contexto y la memoria disponible.
+            prefix = """Ten una conversación con un ser humano y responde las siguientes preguntas lo mejor que puedas según el contexto y la memoria disponible.
                          Tienes acceso a una única herramienta:"""
             suffix = """Comenzar!"
 
